@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MeuSite</div>
+    <ul>
+      <li><a href="./conteudo.html">Jogo</a></li>
+      <li><a href="#">Vídeo-Aulas</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Card de Cadastro -->
+  <div class="card">
+    <h2>Caso queira salvar seu progresso,<br>Junte-se a nós!</h2>
+    <form id="registerForm">
+      <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+      <input type="password" id="password" placeholder="Digite sua senha" required>
+      <button type="submit">CADASTRE-SE</button>
+    </form>
+    <div id="message"></div>
+    <div class="link">
+      Já possui uma conta? <a href="#">Entrar</a>
+    </div>
+  </div>
+
+</body>
+</html>
