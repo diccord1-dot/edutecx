@@ -1,1 +1,259 @@
 @import url(global/global.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kay Pho Du", sans-serif;
+  }
+
+  :root {
+
+    --verde-floresta-escuro: #153F0A;
+    --Verde-erva-doce: #E7FFE1;
+    --verde-jade-claro: #a7dfa7;
+
+    --light: #F7FFF5;
+    --light-hover: #F3FFF0;
+    --light-active: #E7FFE1;
+  
+    --normal: #B1FF9E;
+    --normal-hover: #9FE68E;
+    --normal-active: #8ECC7E;
+  
+    --dark: #85BF77;
+    --dark-hover: #6A995F;
+    --dark-active: #507347;
+  
+    --darker: #72E210;
+  
+    --extra-light-1: #ECF8E8;
+    --extra-light-2: #E2F4DD;
+    --extra-light-3: #C3E8B9;
+  
+    --extra-green-1: #3DB41C;
+    --extra-green-2: #37A219;
+    --extra-green-3: #319016;
+  
+    --extra-deep-1: #2E8715;
+    --extra-deep-2: #256C11;
+    --extra-deep-3: #1B510D;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color:var(--extra-deep-3);
+    scroll-behavior: smooth; 
+}
+
+main {
+  height: 100vh;              
+  overflow-y: scroll;           
+  scroll-snap-type: y mandatory; 
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 44px;
+}
+
+  header {
+    background-color: var(--verde-floresta-escuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 2.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--Verde-erva-doce);
+    font-size: 1.4rem;
+    font-family: "kay pho du", sans-serif;
+    font-weight: 500;
+    display: inline-block;   
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--verde-jade-claro);
+    transform: scale(1.1); 
+  }
+
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75px;
+    margin: 40px 0;
+    height: auto; 
+    
+    padding: 40px;
+}
+
+section:nth-child(even) {
+  flex-direction: row; /* alterna os lados */
+}
+
+section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--light); 
+}
+
+section p {
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--extra-light-3);
+}
+
+.impactos-texto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--light);
+}
+
+.impactos-texto p {
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--extra-light-3);
+}
+
+.conteudo h1 {
+  color: #FFFF;
+}
+
+/* Remove efeito global das sections no rodapé */
+section.footer {
+  display: block;
+  margin: 0; 
+  padding: 0;
+  width: 100%;
+}
+
+footer {
+  background-color: var(--light-hover); 
+  color: black;
+  padding: 2rem 1.5rem;
+  font-family: "Kay Pho Du", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;   /* coluna */
+  justify-content: center;  /* mantém o conteúdo do topo centralizado */
+  align-items: center;
+  margin: 0;
+  position: relative;       /* pra poder alinhar dentro */
+  height: 15rem;
+}
+
+
+
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.footer-top strong {
+  color: black;
+}
+
+.footer-top p {
+  color: #20603C;
+}
+
+footer img.koala {
+  max-height: 12rem;   /* garante que caiba dentro do rodapé */
+  margin-right: 1.5rem;/* espaço ao lado */
+  margin-left: 1rem;   /* opcional: espaço da borda esquerda */
+  height: 14rem;
+  width: auto;         /* mantém proporção */
+}
+
+.icones {
+  max-width: 6rem;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  
+}
+
+.footer-info {
+  text-align: left;
+  color: black;
+  
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.footer-bottom {
+  position: absolute;
+  bottom: 1rem;     /* distância do fundo */
+  right: 1.5rem;    /* distância da direita */
+  font-size: 0.875rem;
+  color: black;
+  font-weight:bold;
+}
+
+.footer-bottom h2 {
+  color: black;
+  display: flex;
+  flex-direction: center;
+  justify-content: bottom;
+  align-items: end;
+}
+
+.footer-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.voltar-topo {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
+span {
+  color: #FFFF;
+  text-decoration: underline;
+}
+
+.voltar-topo button {
+  
+  font: "Kay Pho Du", sans-serif;
+  text-decoration: underline;
+}
