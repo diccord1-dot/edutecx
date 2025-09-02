@@ -1,56 +1,60 @@
 @import url(global/global.css);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Kay Pho Du", sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kay Pho Du", sans-serif;
+}
 
-  :root {
+:root {
+  --verde-floresta-escuro: #153F0A;
+  --Verde-erva-doce: #E7FFE1;
+  --verde-jade-claro: #a7dfa7;
 
-    --verde-floresta-escuro: #153F0A;
-    --Verde-erva-doce: #E7FFE1;
-    --verde-jade-claro: #a7dfa7;
+  --light: #F7FFF5;
+  --light-hover: #F3FFF0;
+  --light-active: #E7FFE1;
 
-    --light: #F7FFF5;
-    --light-hover: #F3FFF0;
-    --light-active: #E7FFE1;
-  
-    --normal: #B1FF9E;
-    --normal-hover: #9FE68E;
-    --normal-active: #8ECC7E;
-  
-    --dark: #85BF77;
-    --dark-hover: #6A995F;
-    --dark-active: #507347;
-  
-    --darker: #72E210;
-  
-    --extra-light-1: #ECF8E8;
-    --extra-light-2: #E2F4DD;
-    --extra-light-3: #C3E8B9;
-  
-    --extra-green-1: #3DB41C;
-    --extra-green-2: #37A219;
-    --extra-green-3: #319016;
-  
-    --extra-deep-1: #2E8715;
-    --extra-deep-2: #256C11;
-    --extra-deep-3: #1B510D;
-  }
+  --normal: #B1FF9E;
+  --normal-hover: #9FE68E;
+  --normal-active: #8ECC7E;
 
-  body {
-    margin: 0;
-    padding: 0;
-    background-color:var(--extra-deep-3);
-    scroll-behavior: smooth; 
+  --dark: #85BF77;
+  --dark-hover: #6A995F;
+  --dark-active: #507347;
+
+  --darker: #72E210;
+
+  --extra-light-1: #ECF8E8;
+  --extra-light-2: #E2F4DD;
+  --extra-light-3: #C3E8B9;
+
+  --extra-green-1: #3DB41C;
+  --extra-green-2: #37A219;
+  --extra-green-3: #319016;
+
+  --extra-deep-1: #2E8715;
+  --extra-deep-2: #256C11;
+  --extra-deep-3: #1B510D;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--extra-deep-3);
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  line-height: 1.7;
 }
 
 main {
-  height: 100vh;              
-  overflow-y: scroll;           
-  scroll-snap-type: y mandatory; 
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 h1 {
@@ -58,65 +62,137 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 44px;
-}
-
-  header {
-    background-color: var(--verde-floresta-escuro);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.625rem 2.5rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: var(--Verde-erva-doce);
-    font-size: 1.4rem;
-    font-family: "kay pho du", sans-serif;
-    font-weight: 500;
-    display: inline-block;   
-    transition: all 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    color: var(--verde-jade-claro);
-    transform: scale(1.1); 
-  }
-
-
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75px;
-    margin: 40px 0;
-    height: auto; 
-    
-    padding: 40px;
-}
-
-section:nth-child(even) {
-  flex-direction: row; /* alterna os lados */
-}
-
-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: var(--light); 
+  font-size: 45px;
+  color: #fff;
 }
 
 section p {
-    line-height: 1.6;
-    text-align: justify;
-    color: var(--extra-light-3);
+  font-size: 1.2rem;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+
+header {
+  background-color: var(--verde-floresta-escuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--Verde-erva-doce);
+  font-size: 1.4rem;
+  font-family: kay pho du, sans-serif;
+  font-weight: 500;
+  display: inline-block;   
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--verde-jade-claro);
+  transform: scale(1.1);
+}
+
+section {
+  
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;   
+    margin: 2.5rem 0;  
+    padding: 2.5rem;   
+  
+}
+
+img {
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+.image-direita,
+.imagem-esquerda {
+  
+  max-width: 37.5rem;
+  max-height: 37.5rem;
+  display: block;
+}
+
+section:nth-child(even) {
+  flex-direction: row;
+}
+
+section h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: "Koh Santepheap", sans-serif;
+}
+
+section p {
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--extra-light-3);
+  font-family: "Klee One", sans-serif;
+}
+
+.intro.texto-esquerda,
+.texto-direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 490px;
+  line-height: 1.6;
+  text-align: justify;
+  color: var(--extra-light-3);
+  gap: 1rem;
+}
+
+.texto-direita h2 {
+  margin: 0;
+  max-width: 480px;
+}
+
+.texto-esquerda h2 {
+  max-width: 37.5rem;
+}
+
+.texto-direita p{
+  font-size: 25px;
+}
+
+.impactos {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;   /* imagem acompanha altura do texto */
+  margin: 2.5rem 0;
+  padding: 0;             /* tira o padding geral */
+  background-color: var(--extra-deep-3);
+}
+
+
+
+
+.impactos-fig{
+  
+  right: 2.5rem;
+  
+  width: min(34vw, 480px);
+  height: auto;
+  display: flex;
 }
 
 .impactos-texto h2 {
@@ -132,35 +208,36 @@ section p {
 }
 
 .conteudo h1 {
-  color: #FFFF;
+  color: #fff;
 }
 
-/* Remove efeito global das sections no rodapé */
+.efeitos-imagem {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 1440px;
+}
+
 section.footer {
   display: block;
-  margin: 0; 
+  margin: 0;
   padding: 0;
   width: 100%;
 }
 
 footer {
-  background-color: var(--light-hover); 
+  background-color: var(--light-hover);
   color: black;
   padding: 2rem 1.5rem;
   font-family: "Kay Pho Du", sans-serif;
   width: 100%;
-  max-width: 100%;
   display: flex;
-  flex-direction: column;   /* coluna */
-  justify-content: center;  /* mantém o conteúdo do topo centralizado */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 0;
-  position: relative;       /* pra poder alinhar dentro */
+  position: relative;
   height: 15rem;
 }
-
-
-
 
 .footer-top {
   display: flex;
@@ -168,7 +245,6 @@ footer {
   align-items: center;
   gap: 2.5rem;
   flex-wrap: wrap;
-  margin-bottom: 1.25rem;
   margin-bottom: 3rem;
 }
 
@@ -181,45 +257,38 @@ footer {
 }
 
 footer img.koala {
-  max-height: 12rem;   /* garante que caiba dentro do rodapé */
-  margin-right: 1.5rem;/* espaço ao lado */
-  margin-left: 1rem;   /* opcional: espaço da borda esquerda */
+  max-height: 12rem;
+  margin: 0 1.5rem;
   height: 14rem;
-  width: auto;         /* mantém proporção */
+  width: auto;
 }
 
 .icones {
   max-width: 6rem;
   display: flex;
-  flex-direction: center;
+  justify-content: center;
   align-items: center;
-  
 }
 
 .footer-info {
   text-align: left;
   color: black;
-  
   padding: 20px;
   border-radius: 10px;
 }
 
-
 .footer-bottom {
   position: absolute;
-  bottom: 1rem;     /* distância do fundo */
-  right: 1.5rem;    /* distância da direita */
+  bottom: 1rem;
+  right: 1.5rem;
   font-size: 0.875rem;
   color: black;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .footer-bottom h2 {
   color: black;
-  display: flex;
-  flex-direction: center;
-  justify-content: bottom;
-  align-items: end;
+  font-size: 1.2rem;
 }
 
 .footer-nav {
@@ -243,17 +312,64 @@ footer img.koala {
 .voltar-topo {
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
-
 span {
-  color: #FFFF;
+  color: #fff;
   text-decoration: underline;
 }
 
 .voltar-topo button {
-  
-  font: "Kay Pho Du", sans-serif;
+  font-family: "Kay Pho Du", sans-serif;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
   text-decoration: underline;
+}
+
+
+.folhagem {
+  background-image: url(/home/user/edutec/Matérias/matéria3/image_copy_3.png);
+  background-size: cover;   /* cobre toda a largura e altura */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 25rem; 
+}
+
+.effects-section .efeitos-cima {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+  align-items: center;
+  padding: 3rem 0; 
+}
+
+.effeitos-texto {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.efeitos-imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+.causas .texto-esquerda p {
+  font-size: 1.8125rem;
+}
+
+.causas .texto-esquerda h2 {
+  font-size: 3.0625rem;
+}
+
+.imagem-direita{
+  background-image: url'https://wallpapercave.com/wp/wp9247076.jpg' !important;
+  background-size: cover;
+  background-position: center;
+  height: 320px;      
 }

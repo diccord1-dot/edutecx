@@ -1,1 +1,67 @@
 @import url(global/global.css);
+
+.banner {
+    width: 100vw;   
+    height: 40vh; 
+    object-fit: cover;
+    display: block; 
+}
+
+.logo-grande {
+    padding: 30rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1 {
+    padding-top: 3rem;
+    padding-left: 13rem;
+    font-size: 8rem;
+    letter-spacing: 0.3rem;
+    font-family: Kavoon,;
+    color: var(--verde-musgo-escuro);
+    
+}
+
+h2 {
+   color: var(--verde-azulado);
+   font-size: 1.6rem;
+   padding-left: 20rem;
+}
+
+.botao {
+    background-color: var(--Verde-oliva-claro); 
+    color: black;            
+    border: none;             
+    padding: 1rem 3rem;      
+    border-radius: 2rem;      
+    font-size: 1.125rem;           
+    font-weight: 500;       
+    cursor: pointer;          
+    font-family: Krona One;
+  }
+  
+  .botao:hover {
+    background-color: #5c8651;
+  }
+
+  .div-botao {
+    padding: 2rem 0rem 0rem 30rem;
+    display: inline-block; 
+      
+  }
+
+  .logo-intro{
+
+  }
+
+  .texto img {
+
+    justify-content: space-between; /* texto à esquerda, logo à direita */
+    align-items: center; /* centraliza verticalmente */
+    padding: 2rem;
+  }
+
+  section{
+    
+  }

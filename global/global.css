@@ -10,6 +10,9 @@
   --verde-floresta-escuro: #153F0A;
   --Verde-erva-doce: #E7FFE1;
   --verde-jade-claro: #a7dfa7;
+  --verde-musgo-escuro: #1B510D;
+  --verde-azulado: #0B484A;
+  --Verde-oliva-claro: #6A995F;
 }
 
 header {
@@ -42,3 +45,4 @@ nav ul li a:hover {
   color: var(--verde-jade-claro);
   transform: scale(1.1); 
 }
+

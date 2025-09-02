@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+  <title>A Importância das Plantas</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="materia2.css">
+  <script src="script2.js" defer></script>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MeuSite</div>
-    <ul>
-      <li><a href="./conteudo.html">Jogo</a></li>
-      <li><a href="#">Vídeo-Aulas</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-
-  <!-- Card de Cadastro -->
-  <div class="card">
-    <h2>Caso queira salvar seu progresso,<br>Junte-se a nós!</h2>
-    <form id="registerForm">
-      <input type="email" id="email" placeholder="Digite o seu e-mail" required>
-      <input type="password" id="password" placeholder="Digite sua senha" required>
-      <button type="submit">CADASTRE-SE</button>
-    </form>
-    <div id="message"></div>
-    <div class="link">
-      Já possui uma conta? <a href="#">Entrar</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo do site" class="logo">
+      <h1>Plantas 🌱</h1>
     </div>
-  </div>
+    <nav class="navbar">
+      <a href="#">Jogo</a>
+      <a href="#">Video-Aulas</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="intro">
+      <h1>A importância das plantas no planeta 🌍</h1>
+      <p>As plantas desempenham papéis fundamentais para a vida na Terra, ajudando na produção de oxigênio, no equilíbrio climático e até no sustento das comunidades humanas.</p>
+    </section>
+
+    <section class="cards-container">
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/61/1a/c0/611ac0481d4d031c031c1a4381ca9fc6.jpg" alt="Alga Marinha">
+        <h2>Alga Marinha</h2>
+        <p>Responsáveis por grande parte do oxigênio no planeta, mesmo não sendo plantas terrestres, fazem parte dos organismos fotossintetizantes.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/3a/b8/97/3ab897739e9958db13824b733be7e558.jpg" alt="Castanheira-do-Pará">
+        <h2>Castanheira-do-Pará</h2>
+        <p>Árvore da Amazônia que contribui para a regulação do clima local e global, além de gerar frutos de grande importância econômica.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.pinimg.com/736x/c4/d4/d9/c4d4d981a0df73a9480368ef784b22ac.jpg" alt="Bananeira">
+        <h2>Bananeira</h2>
+        <p>Além de seus frutos, suas folhas são utilizadas para proteger alimentos e até como abrigo improvisado em comunidades rurais.</p>
+      </div>
+    </section>
+  </main>
+
+  
 </body>
 </html>
