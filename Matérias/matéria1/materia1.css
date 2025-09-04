@@ -112,6 +112,10 @@ h1 {
   padding: 40px 20px;
   border-radius: 20px;
   margin: 40px auto;
+  width: 97.4rem;
+  border-bottom-left-radius: 3.0rem; 
+    border-bottom-right-radius: 3.0rem;
+  
 }
 
 .processo h2 {
@@ -178,7 +182,8 @@ p {
   height: 40px; 
   background-color: #3E5B34;
   border-radius: 10px;
-  margin: 20px auto;   
+  margin: 10px auto;   
+  width: 80.5rem;
 }
 
 

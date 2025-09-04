@@ -176,33 +176,31 @@ section p {
 
 .impactos {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;   /* imagem acompanha altura do texto */
+  justify-content: flex;
+  align-items: stretch;   
   margin: 2.5rem 0;
-  padding: 0;             /* tira o padding geral */
+  padding: 0 2rem;            
   background-color: var(--extra-deep-3);
 }
 
 
 
 
-.impactos-fig{
-  
+.impactos-fig{ 
   right: 2.5rem;
-  
   width: min(34vw, 480px);
   height: auto;
-  display: flex;
-}
+  display: flex; }
 
 .impactos-texto h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 44px;
+
   color: var(--light);
 }
 
 .impactos-texto p {
   line-height: 1.6;
+  font-size: 23px;
   text-align: justify;
   color: var(--extra-light-3);
 }
@@ -330,34 +328,34 @@ span {
 }
 
 
-.folhagem {
-  background-image: url(/home/user/edutec/Matérias/matéria3/image_copy_3.png);
-  background-size: cover;   /* cobre toda a largura e altura */
-  background-position: center;
-  background-repeat: no-repeat;
-
-  width: 100%;
-  height: 25rem; 
+.efeitos-cima {
+  column-count: 2;
+  column-gap: 3rem;
 }
 
-.effects-section .efeitos-cima {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 2rem; 
-  align-items: center;
-  padding: 3rem 0; 
+.efeitos-cima p {
+  color: var(--extra-light-3);
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 1.2rem;   
+  align-items: stretch;
 }
+
+
+.efeitos-cima p.segunda-coluna {
+  break-before: column; 
+}
+
 
 .effeitos-texto {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-.efeitos-imagem img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; 
-}
+
+    .causas {
+      margin-bottom: 20px;
+    }
 
 .causas .texto-esquerda p {
   font-size: 1.8125rem;
@@ -367,9 +365,8 @@ span {
   font-size: 3.0625rem;
 }
 
-.imagem-direita{
-  background-image: url'https://wallpapercave.com/wp/wp9247076.jpg' !important;
-  background-size: cover;
-  background-position: center;
-  height: 320px;      
+.folhagem {
+  width: 100%;
+  height: auto;
+  display: block;
 }

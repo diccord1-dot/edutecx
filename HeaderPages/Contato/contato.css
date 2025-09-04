@@ -1,1 +1,90 @@
 @import url(../../global/global.css);
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #225e38;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color: #e6f2d6;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+  .contato-info {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .contato-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .contato-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 40px);
+    gap: 15px;
+  }
+  
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 1px black);
+  }
+  
+  .contato-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contato-form input,
+  .contato-form textarea {
+    border-radius: 8px;
+    border: none;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+  }
+  
+  .contato-form .form-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contato-form textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .contato-form button {
+    align-self: flex-start;
+    background-color: #24c41c;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .contato-form button:hover {
+    background-color: #1a9f15;
+  }

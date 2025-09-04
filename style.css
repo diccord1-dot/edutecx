@@ -52,17 +52,20 @@ h2 {
   }
 
   .logo-intro{
-    background-color: #5c8651;
-
   }
 
   .texto img {
-
-    justify-content: space-between; /* texto à esquerda, logo à direita */
-    align-items: center; /* centraliza verticalmente */
+    justify-content: space-between; 
+    align-items: center; 
     padding: 2rem;
   }
 
-  section{
-    
-  }
+.img-grande {
+  
+  align-items: end;
+}
+
+
+main{
+  
+}
