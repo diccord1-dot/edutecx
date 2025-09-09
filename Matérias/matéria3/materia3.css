@@ -5,6 +5,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Kay Pho Du", sans-serif;
+  scroll-behavior:smooth;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 :root {

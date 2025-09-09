@@ -41,6 +41,10 @@
   --extra-deep-3: #1B510D;
 }
 
+body{
+  min-width: fit-content;
+}
+
 
 
 header {
@@ -49,6 +53,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.625rem 2.5rem;
+  width: 100%;
 }
 
 nav ul {
@@ -202,6 +207,15 @@ p {
   
   line-height: 1.7;
   font-size: 15px;
+}
+
+
+.passos-p{
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 
