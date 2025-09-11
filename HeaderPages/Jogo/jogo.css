@@ -1,1 +1,143 @@
-@import url(global/global.css);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kay Pho Du", sans-serif;
+  }
+  
+  :root {
+    --verde-floresta-escuro: #153F0A;
+    --Verde-erva-doce: #E7FFE1;
+    --verde-jade-claro: #a7dfa7;
+  
+    --light: #F7FFF5;
+    --light-hover: #F3FFF0;
+    --light-active: #E7FFE1;
+  
+    --normal: #B1FF9E;
+    --normal-hover: #9FE68E;
+    --normal-active: #8ECC7E;
+  
+    --dark: #85BF77;
+    --dark-hover: #6A995F;
+    --dark-active: #507347;
+  
+    --darker: #72E210;
+  
+    --extra-light-1: #ECF8E8;
+    --extra-light-2: #E2F4DD;
+    --extra-light-3: #C3E8B9;
+  
+    --extra-green-1: #3DB41C;
+    --extra-green-2: #37A219;
+    --extra-green-3: #319016;
+  
+    --extra-deep-1: #2E8715;
+    --extra-deep-2: #256C11;
+    --extra-deep-3: #1B510D;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f8f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* header em cima, conteúdo embaixo */
+    min-height: 100vh;
+  }
+  
+  /* garante que o quiz fique centralizado */
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    background-color: var(--verde-floresta-escuro);
+    display: flex;
+    justify-content: space-between; /* logo à esquerda, menu à direita */
+    align-items: center;
+    padding: 0.625rem 2.5rem;
+  }
+  
+  /* logo */
+  .logo img {
+    height: 55px;
+    width: auto;
+    display: block;
+  }
+  
+  /* navegação */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--Verde-erva-doce);
+    font-size: 1.3rem;
+    font-family: "Kay Pho Du", sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: var(--verde-jade-claro);
+    transform: scale(1.1);
+  }
+  
+  /* ------------------ QUIZ ------------------ */
+  .quiz-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    width: 500px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #2b5d34;
+  }
+  
+  .option {
+    display: block;
+    background: #e9f5ec;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .option:hover {
+    background: #cfe9d6;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #45a049;
+  }
+  
+  #result {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  

@@ -1,10 +1,10 @@
-@import url(global/global.css);
+@import url(./global/global.css);
 
 .banner {
-    width: 100vw;   
-    height: 40vh; 
+    width: 100vw;
+    height: 40vh;
     object-fit: cover;
-    display: block; 
+    display: block;
 }
 
 .logo-grande {
@@ -18,54 +18,147 @@ h1 {
     padding-left: 13rem;
     font-size: 8rem;
     letter-spacing: 0.3rem;
-    font-family: Kavoon,;
+    font-family: Kavoon, ;
     color: var(--verde-musgo-escuro);
-    
 }
 
 h2 {
-   color: var(--verde-azulado);
-   font-size: 1.6rem;
-   padding-left: 20rem;
+    color: var(--verde-azulado);
+    font-size: 1.6rem;
+    padding-left: 20rem;
 }
 
 .botao {
-    background-color: var(--Verde-oliva-claro); 
-    color: black;            
-    border: none;             
-    padding: 1rem 3rem;      
-    border-radius: 2rem;      
-    font-size: 1.125rem;           
-    font-weight: 500;       
-    cursor: pointer;          
+    background-color: var(--Verde-oliva-claro);
+    color: black;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
     font-family: Krona One;
-  }
-  
-  .botao:hover {
+}
+
+.botao:hover {
     background-color: #5c8651;
-  }
+}
 
-  .div-botao {
+.div-botao {
     padding: 2rem 0rem 0rem 30rem;
-    display: inline-block; 
-      
-  }
+    display: inline-block;
+}
 
-  .logo-intro{
-  }
+.logo-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
 
-  .texto img {
-    justify-content: space-between; 
-    align-items: center; 
-    padding: 2rem;
-  }
-
-.img-grande {
-  
-  align-items: end;
+.logo-intro img {
+    width: 200px;
+    height: auto;
 }
 
 
-main{
-  
+section.intro .logo-grande {
+    padding: 0;
+}
+
+section.intro .texto {
+    position: relative;
+}
+
+section.intro .texto .img-grande {
+    position: absolute;
+    right: 18rem;
+    top: 2.5rem;
+    z-index: 10;
+    margin: 0;
+    float: none;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #d8c1a0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 900px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-content h2 {
+    font-size: 2rem;
+    color: var(--verde-musgo-escuro);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+.popup-content .logo-mini {
+    width: 30px;
+    height: auto;
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--verde-musgo-escuro);
+    cursor: pointer;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+.card {
+    background-color: #eafde1;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--verde-musgo-escuro);
 }

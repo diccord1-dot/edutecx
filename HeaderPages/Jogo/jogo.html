@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="../../imgs/logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evexplorer</title>
+  <link rel="stylesheet" href="jogo.css">
+  <script src="jogo.js" defer></script>
+  <link rel="shortcut icon" href="../../imgs/logo.png" type="image/x-icon">
 </head>
 <body>
-    <p>a
-    </p>
-</body>
-</html>
+    <header>
+        <a href="../../index.html"><img src="../../imgs/logo.png" alt="Logo" class="logo-header"></a>
+      <nav>
+        <ul>
+          <li><a href="../../index.html">Início</a></li>
+          <li><a href="../../../edutecx/Matérias/matéria1/materia1.html">Fotossíntese</a></li>
+          <li><a href="../../../edutecx/Matérias/matéria2/materia2.html">Plantas</a></li>
+          <li><a href="../../../edutecx/Matérias/matéria3/materia3.html">Aquecimento Global</a></li>
+          <li><a href="../Jogo/jogo.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <div class="quiz-container">
+        <h1>Quiz sobre Meio Ambiente</h1>
+        <h2 id="question">Pergunta...</h2>
+        <div id="options"></div>
+        <button class="btn" onclick="nextQuestion()">Próxima</button>
+        <div id="result"></div>
+      </div>
+    </main>
+  </body>

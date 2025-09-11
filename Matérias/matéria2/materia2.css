@@ -52,7 +52,7 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 3.125rem; /* 50px */
 }
 
 nav ul {
@@ -67,7 +67,7 @@ nav ul li a {
   font-size: 1.4rem;
   font-family: kay pho du, sans-serif;
   font-weight: 500;
-  display: inline-block;   
+  display: inline-block;
   transition: all 0.3s ease;
 }
 
@@ -79,57 +79,57 @@ nav ul li a:hover {
 /* Intro */
 .intro {
   text-align: center;
-  padding: 120px 20px 40px;
+  padding: 7.5rem 1.25rem 2.5rem; /* 120px 20px 40px */
   background: #d4f7dc;
 }
 
 .intro h1 {
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem; /* 15px */
 }
 
 .intro p {
   font-size: 1.1rem;
-  max-width: 700px;
+  max-width: 43.75rem; /* 700px */
   margin: 0 auto;
 }
 
 /* Cards */
 .cards-container {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
   flex-wrap: wrap;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background: #a6e4a1;
 }
 
 .card {
   background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  border-radius: 0.9375rem; /* 15px */
+  padding: 1.25rem; /* 20px */
+  width: 17.5rem; /* 280px */
+  box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.15); /* 6px 15px */
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card img {
-  height: 160px; /* AUMENTEI O TAMANHO DAS IMAGENS */
-  margin-bottom: 15px;
-  border-radius: 10px;
+  height: 10rem; /* 160px */
+  margin-bottom: 0.9375rem; /* 15px */
+  border-radius: 0.625rem; /* 10px */
   object-fit: cover;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  transform: translateY(-0.3125rem); /* 5px */
+  box-shadow: 0 0.75rem 1.5625rem rgba(0,0,0,0.25); /* 12px 25px */
 }
 
 /* Banner */
 .banner img {
   width: 100%;
-  height: 400px;
+  height: 25rem; /* 400px */
   object-fit: cover;
   display: block;
 }
@@ -137,8 +137,8 @@ nav ul li a:hover {
 /* Conteúdo em colunas */
 .content {
   display: flex;
-  gap: 30px;
-  padding: 40px 20px;
+  gap: 1.875rem; /* 30px */
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background: #f5fff5;
 }
 
@@ -147,55 +147,212 @@ nav ul li a:hover {
 }
 
 .column img {
-  margin-top: 20px;
+  margin-top: 1.25rem; /* 20px */
   max-width: 100%;
-  border-radius: 12px;
+  border-radius: 0.75rem; /* 12px */
 }
 
 /* Banner de grama */
 .grass-banner {
   background: url("https://images.unsplash.com/photo-1492621227180-6f28b37e1d9d") no-repeat center/cover;
-  height: 250px;
+  height: 15.625rem; /* 250px */
 }
 
 /* Rodapé */
+section.footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 footer {
-  background: #e8fff0;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.footer-box {
+  background-color: var(--light-hover);
+  color: black;
+  padding: 2rem 1.5rem;
+  font-family: "Kay Pho Du", sans-serif;
+  width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  height: 15rem;
 }
 
-.footer-img {
-  width: 100px;
-  border-radius: 12px;
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.footer-top strong {
+  color: black;
+}
+
+.footer-top p {
+  color: #20603C;
+}
+
+footer img.koala {
+  max-height: 12rem;
+  margin: 0 1.5rem;
+  height: 14rem;
+  width: auto;
+}
+
+.icones {
+  max-width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-info {
   text-align: left;
-  font-size: 0.95rem;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.footer-info p {
-  margin: 8px 0;
+.footer-bottom {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.875rem;
+  color: black;
+  font-weight: bold;
 }
 
-.icon {
-  width: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
+.footer-bottom h2 {
+  color: black;
+  font-size: 1.2rem;
 }
 
-.copy {
+.footer-nav {
   margin-top: 20px;
-  font-size: 0.9rem;
-  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
 }
 
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.voltar-topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.voltar-topo button {
+  font-family: "Kay Pho Du", sans-serif;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+.efeitos-cima {
+  column-count: 2;
+  column-gap: 3rem;
+}
+
+.efeitos-cima p {
+  color: var(--extra-light-3);
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 1.2rem;   
+  align-items: stretch;
+}
+
+
+.efeitos-cima p.segunda-coluna {
+  break-before: column; 
+}
+
+
+.effeitos-texto {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+    .causas {
+      margin-bottom: 20px;
+    }
+
+.causas .texto-esquerda p {
+  font-size: 1.8125rem;
+}
+
+.causas .texto-esquerda h2 {
+  font-size: 3.0625rem;
+}
+
+.folhagem {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Seção conteúdo (duas colunas) */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f2faef; /* tom clarinho */
+}
+
+.column {
+  flex: 1;
+}
+
+.column h2 {
+  color: #1f5f2e;
+  margin-bottom: 10px;
+}
+
+.column p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.img-conteudo {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* Seção grama */
+.grass-banner {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.grass-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

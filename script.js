@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const includes = document.querySelectorAll('[data-include]');
-    
+
     includes.forEach(el => {
         const file = el.getAttribute("data-include");
-        
+
         fetch(file)
             .then(response => {
                 if (!response.ok) throw new Error("Erro ao carregar " + file);
@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => console.error("Erro:", error));
     });
 });
-
-/* === LOADER === */
 
 const MIN_TIME = 1350;
 window.addEventListener("load", () => {
@@ -31,4 +29,22 @@ window.addEventListener("load", () => {
             loader.style.display = "none";
         }, 800);
     }, remaining > 0 ? remaining : 0);
+});
+
+const botao = document.querySelector(".botao");
+const popup = document.getElementById("popup");
+const fechar = document.querySelector(".close");
+
+botao.addEventListener("click", () => {
+    popup.style.display = "block";
+});
+
+fechar.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
 });

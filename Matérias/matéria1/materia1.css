@@ -193,30 +193,178 @@ p {
 
 
 .etapas {
-
-  margin-top: 3rem;
+  width: 100%;
+  height: 60rem;
+  background-color: #37A219;
 }
 
 .etapas h2 {
-
   margin: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
 }
 
 
 .etapas p {
+  line-height: 2.0;
+  font-size: 20px;
+  width: 90%;
+  text-align: center;
+}
+
+.etapas img {
+
   
-  line-height: 1.7;
-  font-size: 15px;
+  margin: 0px 50px;
+
+}
+
+.img1-func {
+
+margin-left: 10rem;
 }
 
 
 .passos-p{
   display: flex;
   text-align: center;
-  gap: 2rem;
+  gap: 1rem;
+  
+  
+  margin: 0px 50px;
   align-items: center;
   justify-content: center;
+
+
+  
 }
+
+
+.papel-oxigenio {
+
+  height: 65rem;
+  background-color: #85BF77;
+}
+
+.papel-oxigenio p {
+
+  line-height: 2.0;
+  font-size: 20px;
+  width: 90%;
+}
+
+
+
+.importancia-fotossintese{
+
+  height: 40rem;
+  background-color: #507347;
+}
+
+
+
+
+
+
+
+
+
+section.footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+footer {
+  background-color: var(--light-hover);
+  color: black;
+  padding: 2rem 1.5rem;
+  font-family: "Kay Pho Du", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 15rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.footer-top strong {
+  color: black;
+}
+
+.footer-top p {
+  color: #20603C;
+}
+
+footer img.koala {
+  max-height: 12rem;
+  margin: 0 1.5rem;
+  height: 14rem;
+  width: auto;
+}
+
+.icones {
+  max-width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-info {
+  text-align: left;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 0.875rem;
+  color: black;
+  font-weight: bold;
+}
+
+.footer-bottom h2 {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.footer-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
 
 
 
