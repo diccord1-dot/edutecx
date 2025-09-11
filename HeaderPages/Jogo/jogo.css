@@ -47,7 +47,6 @@
     min-height: 100vh;
   }
   
-  /* garante que o quiz fique centralizado, mas o header fixo em cima */
   main {
     flex: 1; /* ocupa o espaço restante abaixo do header */
     display: flex;
@@ -91,7 +90,7 @@
     color: #2b5d34;
   }
   
-  .option {
+  .alternativa {
     display: block;
     background: #e9f5ec;
     margin: 12px 0;
@@ -101,11 +100,13 @@
     transition: 0.3s;
   }
   
-  .option:hover {
+  .alternativa:hover {
     background: #cfe9d6;
   }
   
-  .btn {
+  .btn,
+  .começar-btn,
+  .reiniciar-btn {
     margin-top: 20px;
     padding: 10px 25px;
     border: none;
@@ -114,13 +115,16 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
   
-  .btn:hover {
+  .btn:hover,
+  .começar-btn:hover,
+  .reiniciar-btn:hover {
     background: #45a049;
   }
   
-  #result {
+  #resultado {
     margin-top: 25px;
     font-weight: bold;
     font-size: 18px;
@@ -137,48 +141,7 @@
     font-family: Arial, sans-serif;
   }
   
-  #question {
+  #pergunta {
     font-size: 20px;
     margin-bottom: 20px;
   }
-  
-  .option {
-    background: #e9f5ec;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .option:hover {
-    background: #d4ebd9;
-  }
-  
-  .btn,
-  .start-btn,
-  .restart-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 24px;
-    margin: 15px auto;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    transition: background 0.3s ease;
-  }
-  
-  .btn:hover,
-  .start-btn:hover,
-  .restart-btn:hover {
-    background-color: #45a049;
-  }
-  
-  #result {
-    font-size: 18px;
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  

@@ -1,154 +1,154 @@
-const quizData = [
+const dadosDoQuiz = [
   {
-    question: "Qual é a principal função da fotossíntese?",
-    options: [
+    pergunta: "Qual é a principal função da fotossíntese?",
+    alternativas: [
       "Produzir energia elétrica",
       "Converter energia solar em energia química",
       "Transformar oxigênio em gás carbônico",
       "Aumentar a temperatura da Terra"
     ],
-    answer: "Converter energia solar em energia química"
+    respostaCorreta: "Converter energia solar em energia química"
   },
   {
-    question: "Além de se alimentarem, as plantas desempenham qual papel essencial?",
-    options: [
+    pergunta: "Além de se alimentarem, as plantas desempenham qual papel essencial?",
+    alternativas: [
       "Gerar calor para o planeta",
       "Regular o ciclo da água e produzir oxigênio",
       "Absorver apenas calor",
       "Produzir apenas frutos"
     ],
-    answer: "Regular o ciclo da água e produzir oxigênio"
+    respostaCorreta: "Regular o ciclo da água e produzir oxigênio"
   },
   {
-    question: "O que causa o aquecimento global?",
-    options: [
+    pergunta: "O que causa o aquecimento global?",
+    alternativas: [
       "Apenas fenômenos naturais",
       "Excesso de gases de efeito estufa devido às atividades humanas",
       "A respiração das plantas",
       "A rotação da Terra"
     ],
-    answer: "Excesso de gases de efeito estufa devido às atividades humanas"
+    respostaCorreta: "Excesso de gases de efeito estufa devido às atividades humanas"
   },
   {
-    question: "Qual impacto do aquecimento global sobre os ecossistemas?",
-    options: [
+    pergunta: "Qual impacto do aquecimento global sobre os ecossistemas?",
+    alternativas: [
       "Aumento da biodiversidade",
       "Degelo, extinção de espécies e mudanças climáticas extremas",
       "Aumento da fotossíntese",
       "Estabilidade social e climática"
     ],
-    answer: "Degelo, extinção de espécies e mudanças climáticas extremas"
+    respostaCorreta: "Degelo, extinção de espécies e mudanças climáticas extremas"
   },
   {
-    question: "As plantas são consideradas a base da cadeia alimentar porque:",
-    options: [
+    pergunta: "As plantas são consideradas a base da cadeia alimentar porque:",
+    alternativas: [
       "Produzem seu próprio alimento",
       "Comem outros animais",
       "Não respiram oxigênio",
       "Vivem para sempre"
     ],
-    answer: "Produzem seu próprio alimento"
+    respostaCorreta: "Produzem seu próprio alimento"
   }
 ];
 
-let currentQuestion = 0;
-let score = 0;
-let selectedOption = "";
+let perguntaAtual = 0;
+let pontuacao = 0;
+let opcaoSelecionada = "";
 
-const questionEl = document.getElementById("question");
-const optionsEl = document.getElementById("options");
-const resultEl = document.getElementById("result");
-const nextBtn = document.querySelector(".btn");
+const elementoPergunta = document.getElementById("pergunta");
+const elementoAlternativas = document.getElementById("alternativas");
+const elementoResultado = document.getElementById("resultado");
+const botaoProxima = document.querySelector(".btn");
 
-const restartBtn = document.createElement("button");
-restartBtn.textContent = "Recomeçar";
-restartBtn.classList.add("restart-btn");
-restartBtn.onclick = restartQuiz;
-restartBtn.style.display = "none";
-document.querySelector(".quiz-container").appendChild(restartBtn);
+const botaoReiniciar = document.createElement("button");
+botaoReiniciar.textContent = "Recomeçar";
+botaoReiniciar.classList.add("reiniciar-btn");
+botaoReiniciar.onclick = reiniciarQuiz;
+botaoReiniciar.style.display = "none";
+document.querySelector(".quiz-container").appendChild(botaoReiniciar);
 
-const startBtn = document.createElement("button");
-startBtn.textContent = "Começar Quiz";
-startBtn.classList.add("start-btn");
-startBtn.onclick = startQuiz;
-document.querySelector(".quiz-container").appendChild(startBtn);
+const botaoComecar = document.createElement("button");
+botaoComecar.textContent = "Começar Quiz";
+botaoComecar.classList.add("começar-btn");
+botaoComecar.onclick = comecarQuiz;
+document.querySelector(".quiz-container").appendChild(botaoComecar);
 
-questionEl.style.display = "none";
-optionsEl.style.display = "none";
-nextBtn.style.display = "none";
+elementoPergunta.style.display = "none";
+elementoAlternativas.style.display = "none";
+botaoProxima.style.display = "none";
 
-function loadQuestion() {
-  const q = quizData[currentQuestion];
-  questionEl.textContent = q.question;
-  optionsEl.innerHTML = "";
-  q.options.forEach(option => {
+function carregarPergunta() {
+  const p = dadosDoQuiz[perguntaAtual];
+  elementoPergunta.textContent = p.pergunta;
+  elementoAlternativas.innerHTML = "";
+  p.alternativas.forEach(alternativa => {
     const btn = document.createElement("div");
-    btn.textContent = option;
-    btn.classList.add("option");
-    btn.onclick = () => selectOption(option, btn);
-    optionsEl.appendChild(btn);
+    btn.textContent = alternativa;
+    btn.classList.add("alternativa");
+    btn.onclick = () => selecionarAlternativa(alternativa, btn);
+    elementoAlternativas.appendChild(btn);
   });
 }
 
-function selectOption(option, element) {
-  selectedOption = option;
-  document.querySelectorAll(".option").forEach(btn => btn.style.background = "#e9f5ec");
-  element.style.background = "#b3d9ff";
+function selecionarAlternativa(alternativa, elemento) {
+  opcaoSelecionada = alternativa;
+  document.querySelectorAll(".alternativa").forEach(btn => btn.style.background = "#e9f5ec");
+  elemento.style.background = "#b3d9ff";
 }
 
-function nextQuestion() {
-  if (!selectedOption) {
+function proximaPergunta() {
+  if (!opcaoSelecionada) {
     alert("Escolha uma opção!");
     return;
   }
-  const correctAnswer = quizData[currentQuestion].answer;
-  const optionButtons = document.querySelectorAll(".option");
-  optionButtons.forEach(btn => {
-    if (btn.textContent === correctAnswer) {
-      btn.style.background = "#8BC34A";
+  const respostaCorreta = dadosDoQuiz[perguntaAtual].respostaCorreta;
+  const botoesAlternativa = document.querySelectorAll(".alternativa");
+  botoesAlternativa.forEach(btn => {
+    if (btn.textContent === respostaCorreta) {
+      btn.style.background = "#8BC34A"; // verde se for correta
       btn.style.color = "#fff";
-    } else if (btn.textContent === selectedOption) {
-      btn.style.background = "#F44336";
+    } else if (btn.textContent === opcaoSelecionada) {
+      btn.style.background = "#F44336"; // vermelho se errada
       btn.style.color = "#fff";
     }
-    btn.style.pointerEvents = "none";
+    btn.style.pointerEvents = "none"; // desabilita o clique após resposta
   });
-  if (selectedOption === correctAnswer) {
-    score++;
+  if (opcaoSelecionada === respostaCorreta) {
+    pontuacao++; // aumenta a pontuação se a resposta estiver certa
   }
   setTimeout(() => {
-    selectedOption = "";
-    currentQuestion++;
-    if (currentQuestion < quizData.length) {
-      loadQuestion();
+    opcaoSelecionada = "";
+    perguntaAtual++;
+    if (perguntaAtual < dadosDoQuiz.length) {
+      carregarPergunta(); // carrega a próxima pergunta
     } else {
-      showResult();
+      exibirResultado(); // exibe o resultado final
     }
-  }, 1500);
+  }, 1500); // delay para mostrar as cores antes de seguir
 }
 
-function showResult() {
-  questionEl.style.display = "none";
-  optionsEl.style.display = "none";
-  nextBtn.style.display = "none";
-  resultEl.textContent = `Você acertou ${score} de ${quizData.length} perguntas! 🌱`;
-  restartBtn.style.display = "inline-block";
+function exibirResultado() {
+  elementoPergunta.style.display = "none";
+  elementoAlternativas.style.display = "none";
+  botaoProxima.style.display = "none";
+  elementoResultado.textContent = `Você acertou ${pontuacao} de ${dadosDoQuiz.length} perguntas! 🌱`;
+  botaoReiniciar.style.display = "inline-block";
 }
 
-function restartQuiz() {
-  currentQuestion = 0;
-  score = 0;
-  selectedOption = "";
-  resultEl.textContent = "";
-  restartBtn.style.display = "none";
-  startBtn.style.display = "inline-block";
+function reiniciarQuiz() {
+  perguntaAtual = 0;
+  pontuacao = 0;
+  opcaoSelecionada = "";
+  elementoResultado.textContent = "";
+  botaoReiniciar.style.display = "none";
+  botaoComecar.style.display = "inline-block";
 }
 
-function startQuiz() {
-  startBtn.style.display = "none";
-  questionEl.style.display = "block";
-  optionsEl.style.display = "block";
-  nextBtn.style.display = "inline-block";
-  resultEl.textContent = "";
-  loadQuestion();
+function comecarQuiz() {
+  botaoComecar.style.display = "none";
+  elementoPergunta.style.display = "block";
+  elementoAlternativas.style.display = "block";
+  botaoProxima.style.display = "inline-block";
+  elementoResultado.textContent = "";
+  carregarPergunta();
 }
