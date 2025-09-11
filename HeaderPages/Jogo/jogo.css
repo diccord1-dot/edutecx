@@ -3,73 +3,67 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Kay Pho Du", sans-serif;
+    
   }
-  
+
   :root {
-    --verde-floresta-escuro: #153F0A;
-    --Verde-erva-doce: #E7FFE1;
-    --verde-jade-claro: #a7dfa7;
-  
-    --light: #F7FFF5;
-    --light-hover: #F3FFF0;
-    --light-active: #E7FFE1;
-  
-    --normal: #B1FF9E;
-    --normal-hover: #9FE68E;
-    --normal-active: #8ECC7E;
-  
-    --dark: #85BF77;
-    --dark-hover: #6A995F;
-    --dark-active: #507347;
-  
-    --darker: #72E210;
-  
-    --extra-light-1: #ECF8E8;
-    --extra-light-2: #E2F4DD;
-    --extra-light-3: #C3E8B9;
-  
-    --extra-green-1: #3DB41C;
-    --extra-green-2: #37A219;
-    --extra-green-3: #319016;
-  
-    --extra-deep-1: #2E8715;
-    --extra-deep-2: #256C11;
-    --extra-deep-3: #1B510D;
-  }
-  
+  --verde-floresta-escuro: #153F0A;
+  --Verde-erva-doce: #E7FFE1;
+  --verde-jade-claro: #a7dfa7;
+
+  --light: #F7FFF5;
+  --light-hover: #F3FFF0;
+  --light-active: #E7FFE1;
+
+  --normal: #B1FF9E;
+  --normal-hover: #9FE68E;
+  --normal-active: #8ECC7E;
+
+  --dark: #85BF77;
+  --dark-hover: #6A995F;
+  --dark-active: #507347;
+
+  --darker: #72E210;
+
+  --extra-light-1: #ECF8E8;
+  --extra-light-2: #E2F4DD;
+  --extra-light-3: #C3E8B9;
+
+  --extra-green-1: #3DB41C;
+  --extra-green-2: #37A219;
+  --extra-green-3: #319016;
+
+  --extra-deep-1: #2E8715;
+  --extra-deep-2: #256C11;
+  --extra-deep-3: #1B510D;
+}
+
   body {
     font-family: "Poppins", sans-serif;
     background: #f4f8f4;
     margin: 0;
     display: flex;
-    flex-direction: column; /* header em cima, conteúdo embaixo */
+    flex-direction: column; /* empilha header e conteúdo */
     min-height: 100vh;
   }
   
-  /* garante que o quiz fique centralizado */
+  /* garante que o quiz fique centralizado, mas o header fixo em cima */
   main {
-    flex: 1;
+    flex: 1; /* ocupa o espaço restante abaixo do header */
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
+
   header {
     background-color: var(--verde-floresta-escuro);
     display: flex;
-    justify-content: space-between; /* logo à esquerda, menu à direita */
+    justify-content: space-between;
     align-items: center;
     padding: 0.625rem 2.5rem;
   }
   
-  /* logo */
-  .logo img {
-    height: 55px;
-    width: auto;
-    display: block;
-  }
-  
-  /* navegação */
   nav ul {
     list-style: none;
     display: flex;
@@ -79,9 +73,10 @@
   nav ul li a {
     text-decoration: none;
     color: var(--Verde-erva-doce);
-    font-size: 1.3rem;
-    font-family: "Kay Pho Du", sans-serif;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: kay pho du, sans-serif;
+    font-weight: 500;
+    display: inline-block;   
     transition: all 0.3s ease;
   }
   
@@ -90,16 +85,6 @@
     transform: scale(1.1);
   }
   
-  /* ------------------ QUIZ ------------------ */
-  .quiz-container {
-    background: #fff;
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    width: 500px;
-    max-width: 90%;
-    text-align: center;
-  }
   
   h1 {
     margin-bottom: 20px;
@@ -139,5 +124,61 @@
     margin-top: 25px;
     font-weight: bold;
     font-size: 18px;
+  }
+
+  .quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  #question {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .option {
+    background: #e9f5ec;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .option:hover {
+    background: #d4ebd9;
+  }
+  
+  .btn,
+  .start-btn,
+  .restart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover,
+  .start-btn:hover,
+  .restart-btn:hover {
+    background-color: #45a049;
+  }
+  
+  #result {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
   }
   

@@ -313,46 +313,44 @@ span {
   height: auto;
   display: block;
 }
-/* Seção conteúdo (duas colunas) */
+/* Seção conteúdo em blocos */
 .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  display: block;
   padding: 40px;
-  background-color: #f2faef; /* tom clarinho */
+  background-color: #f2faef;
 }
 
-.column {
-  flex: 1;
+.column.full {
+  margin-bottom: 40px;
 }
 
-.column h2 {
+.column.full h2 {
   color: #1f5f2e;
   margin-bottom: 10px;
 }
 
-.column p {
+.column.full p {
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .img-conteudo {
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
   border-radius: 12px;
   margin-top: 20px;
+  display: block;
 }
 
-/* Seção grama */
+/* Seção grama com altura reduzida */
 .grass-banner {
   width: 100%;
-  height: auto;
-  margin-top: 20px;
+  overflow: hidden;
 }
 
 .grass-banner img {
   width: 100%;
-  height: auto;
+  height: 200px; /* <<< ajusta a altura da grama */
+  object-fit: cover; /* garante que a imagem não distorça */
   display: block;
 }
