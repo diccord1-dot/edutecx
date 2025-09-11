@@ -154,8 +154,8 @@ nav ul li a:hover {
 
 /* Banner de grama */
 .grass-banner {
-  background: url("https://images.unsplash.com/photo-1492621227180-6f28b37e1d9d") no-repeat center/cover;
-  height: 15.625rem; /* 250px */
+  background: url("GramaFundo.jpg") no-repeat center/cover;
+  height: 22.5rem; /* 250px */
 }
 
 /* Rodapé */
@@ -242,7 +242,7 @@ footer img.koala {
 }
 
 .footer-nav a {
-  color: white;
+  color: rgb(30, 92, 66);
   text-decoration: none;
 }
 
@@ -257,7 +257,7 @@ footer img.koala {
 }
 
 span {
-  color: #fff;
+  color: #0e0e0e;
   text-decoration: underline;
 }
 
@@ -265,7 +265,7 @@ span {
   font-family: "Kay Pho Du", sans-serif;
   background: none;
   border: none;
-  color: #fff;
+  color: #1a0505;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -313,36 +313,34 @@ span {
   height: auto;
   display: block;
 }
-/* Seção conteúdo em blocos */
-.content {
-  display: block;
-  padding: 40px;
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 2.5rem; /* 40px / 16 = 2.5rem */
+  padding: 2.5rem; /* 40px / 16 = 2.5rem */
   background-color: #f2faef;
 }
 
-.column.full {
-  margin-bottom: 40px;
+.content-grid h2 {
+  color: #1f5f2e;     
+  margin-bottom: 0.625rem; /* 10px / 16 = 0.625rem */
 }
 
-.column.full h2 {
-  color: #1f5f2e;
-  margin-bottom: 10px;
-}
-
-.column.full p {
+.content-grid p {
+  margin-bottom: 1.25rem; /* 20px / 16 = 1.25rem */
   line-height: 1.6;
-  margin-bottom: 20px;
 }
 
+/* Imagem da flor azul */
 .img-conteudo {
   width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
-  margin-top: 20px;
+  max-width: 31.25rem; /* 500px / 16 = 31.25rem */
+  border-radius: 0.75rem; /* 12px / 16 = 0.75rem */
+  margin-top: 1.25rem; /* 20px / 16 = 1.25rem */
   display: block;
 }
 
-/* Seção grama com altura reduzida */
+/* Banner grama */
 .grass-banner {
   width: 100%;
   overflow: hidden;
@@ -350,7 +348,8 @@ span {
 
 .grass-banner img {
   width: 100%;
-  height: 200px; /* <<< ajusta a altura da grama */
-  object-fit: cover; /* garante que a imagem não distorça */
+  height: 22.5rem; /* 360px / 16 = 22.5rem */
+  object-fit: cover;
   display: block;
 }
+
