@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mario Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Jogo do Mario -->
+  <div class="game">
+    <img src="https://i.imgur.com/Nb8BR2z.gif" class="mario" alt="Mario">
+    <img src="https://i.imgur.com/QgrrWPp.png" class="pipe" alt="Cano">
+    <img src="https://i.imgur.com/2vQxJxD.png" class="enemy" alt="Inimigo">
+  </div>
+
+  <!-- Batalha de Quiz -->
+  <div class="quiz" id="quiz" style="display: none;">
+    <h2>Quiz de Batalha!</h2>
+    <p>Qual é o nome do criador do Mario?</p>
+    <button onclick="checkAnswer(true)">Shigeru Miyamoto</button>
+    <button onclick="checkAnswer(false)">Hideo Kojima</button>
+  </div>
+
+  <!-- Botão para reiniciar -->
+  <div class="restart-container" style="display: none;">
+    <button onclick="restartGame()">Recomeçar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

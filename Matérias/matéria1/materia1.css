@@ -299,10 +299,15 @@ margin-left: 10rem;
 
 
 
+
+
+
+
+
 .importancia-fotossintese{
 
-  height: 40rem;
-  background-color: #507347;
+  height: 80rem;
+  background-color: var(--extra-deep-3);
 }
 
 
@@ -314,7 +319,7 @@ margin-left: 10rem;
 }
 
 
-.importancia-fotossintese h3 {
+.importancia-fotossintese h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   color: #dfffd8;
@@ -326,15 +331,8 @@ margin-left: 10rem;
 }
 
 
-.importancia-fotossintese  div {
-  background-color: #e2f4df;
-  padding: 15px;
-  border-radius: 6px;
-  color: #1b2e1b;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
+
+
 
 
 .importancia-fotossintese button {
@@ -360,6 +358,13 @@ margin-left: 10rem;
 .importancia-fotossintese .button2:hover {
   background-color: #255d28;
 }
+
+
+
+
+
+
+
 
 
 
