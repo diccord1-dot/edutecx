@@ -25,6 +25,7 @@
     <a href="../../index.html"><img src="../../imgs/logo.png" alt="Logo" class="logo-header"></a>
     <nav>
         <ul>
+            <li><a href="../../HeaderPages/Sobre/sobre.html">Sobre nós</a></li>
             <li><a href="../../HeaderPages/Jogo/jogo.html">Jogo</a></li>
             <li><a href="../../HeaderPages/Contato/contato.html">Contato</a></li>
         </ul>
@@ -43,15 +44,80 @@
       </div>
     </div>
   
-    <form class="contato-form">
-      <input type="text" placeholder="Digite o seu nome:">
-      <div class="form-row">
-        <input type="text" placeholder="Digite seu endereço:">
-        <input type="text" placeholder="Digite o seu telefone:">
-      </div>
-      <textarea placeholder="Digite sua mensagem ou feedback:"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+    <form id="meu-formulario" class="orcamento-form">
+                <div class="form-group">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="servico" >O quanto você gostou?:</label>
+                    <select id="servico" name="servico" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="Bancada">Pra dedeu</option>
+                        <option value="Piso">Pra xuxu</option>
+                        <option value="Restauracao">Muito</option>
+                        <option value="Limpeza">Muitão</option>
+                        <option value="Reforma">Gostei</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="mensagem">Mensagem / Detalhes:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+  
+              <button type="submit" class="cta-btn">Enviar Orçamento</button>
+          </form>
+      </section>
+
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init('rRYgliyeBLgyoj-RX');
+})();
+
+const form = document.getElementById('meu-formulario');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const dataAtual = new Date().toLocaleString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+    timeZone: 'America/Sao_Paulo'
+  });
+
+  let inputData = form.querySelector('input[name="date"]');
+  if (!inputData) {
+    inputData = document.createElement('input');
+    inputData.type = 'hidden';
+    inputData.name = 'date';
+    form.appendChild(inputData);
+  }
+  inputData.value = dataAtual;
+
+  emailjs.sendForm('service_27kv9j4', 'template_qfix2b8', this)
+    .then(() => alert('E-mail enviado com sucesso!'))
+    .catch(err => alert('Erro ao enviar: ' + JSON.stringify(err)));
+});
+</script>
+
     </div>
   </main>
 

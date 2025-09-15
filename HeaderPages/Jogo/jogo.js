@@ -97,10 +97,7 @@ function selecionarAlternativa(alternativa, elemento) {
 }
 
 function proximaPergunta() {
-  if (!opcaoSelecionada) {
-    alert("Escolha uma opção!");
-    return;
-  }
+  
   const respostaCorreta = dadosDoQuiz[perguntaAtual].respostaCorreta;
   const botoesAlternativa = document.querySelectorAll(".alternativa");
   botoesAlternativa.forEach(btn => {

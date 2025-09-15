@@ -1,0 +1,99 @@
+@import url(../../global/global.css);
+
+body {
+    font-family: 'Krona One', sans-serif;
+    background-color: #cfdef3;
+    color: #333;
+}
+
+.titulo-sobre {
+    text-align: center;
+    margin-top: 12vh;
+    font-size: 3rem;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    animation: fadeInDown 1s ease;
+}
+
+.intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 1rem auto 3rem auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    animation: fadeIn 1.2s ease;
+}
+
+.meliantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 3rem;
+    margin: 4rem auto;
+    width: 100rem;
+    padding: 0 2rem;
+}
+
+.meliante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    perspective: 1000px; /* pra dar efeito 3D */
+    animation: fadeInUp 1.2s ease;
+}
+
+.meliante:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.meliante img {
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 5px solid transparent;
+    background: linear-gradient(135deg, #0077ff, #00d4ff) border-box;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.meliante:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 136, 255, 0.5);
+}
+
+.nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222;
+    position: relative;
+}
+
+.nome::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 50%;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #0077ff, #00d4ff);
+    animation: growBar 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

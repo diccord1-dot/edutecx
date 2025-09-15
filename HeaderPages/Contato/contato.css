@@ -55,9 +55,9 @@ main img {
   
   .contato-form input,
   .contato-form textarea {
-    border-radius: 8px;
+    border-radius: 20px;
     border: none;
-    padding: 12px;
+    padding: 20px;
     margin-bottom: 15px;
     font-size: 14px;
     background-color: white;
@@ -80,7 +80,7 @@ main img {
     color: white;
     padding: 12px 30px;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
@@ -96,4 +96,75 @@ main img {
     color: black;       
     font-family: 'Klee One', sans-serif; 
     font-weight:500;
+  }
+
+  .orcamento-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #2c6a44; /* verde mais escuro */
+    padding: 30px 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #e6f2d6;
+    font-family: 'Klee One', sans-serif;
+    width: 50rem;
+  }
+  
+  .orcamento-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .orcamento-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .orcamento-form input,
+  .orcamento-form select,
+  .orcamento-form textarea {
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: none;
+    font-size: 14px;
+    font-family: 'Klee One', sans-serif;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .orcamento-form input:focus,
+  .orcamento-form select:focus,
+  .orcamento-form textarea:focus {
+    box-shadow: 0 0 10px #24c41c;
+  }
+  
+  .orcamento-form textarea {
+    resize: none;
+    min-height: 100px;
+  }
+  
+  .orcamento-form button.cta-btn {
+    background: linear-gradient(90deg, #24c41c, #1a9f15);
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    transition: 0.3s;
+  }
+  
+  .orcamento-form button.cta-btn:hover {
+    background: linear-gradient(90deg, #1a9f15, #159210);
+  }
+  
+  .orcamento-form input::placeholder,
+  .orcamento-form textarea::placeholder {
+    color: #888;
+    font-weight: 500;
   }
