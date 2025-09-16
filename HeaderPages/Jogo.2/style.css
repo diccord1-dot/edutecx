@@ -52,7 +52,7 @@ html, body {
 }
 
 /* Inimigos */
-.enemy {
+.inimigo {
   width: 80px;
   position: absolute;
   bottom: 100px;

@@ -3,15 +3,15 @@ const quiz = document.getElementById("quiz");
 const alternativasDiv = document.getElementById("alternativas");
 const overlay = document.getElementById("overlay");
 
-let marioX = 50, marioY = 100, velocityY = 0;
-const gravity = -0.8, jumpForce = 15, moveSpeed = 2.5; 
+let marioX = 50, marioY = 100, velocidadeY = 0;
+const gravidade = -0.8, pulo = 15, Movimento = 2.5; 
 
-let gameActive = true, battleActive = false;
+let gameAtivo = true, batalhaAtiva = false;
 
-const keys = { left: false, right: false };
+const key = { left: false, right: false };
 
-let enemies = Array.from(document.querySelectorAll(".enemy"));
-let pipes = Array.from(document.querySelectorAll(".pipe"));
+let inimigos = Array.from(document.querySelectorAll(".inimigo"));
+let canos = Array.from(document.querySelectorAll(".cano"));
 
 const perguntas = [
   {
@@ -70,35 +70,31 @@ let perguntasRestantes = [...perguntas];
 
 
 document.addEventListener("keydown", (e) => {
-  if (!gameActive) return;
-  if (e.key === "ArrowRight" || e.key === "d") keys.right = true;
-  if (e.key === "ArrowLeft" || e.key === "a") keys.left = true;
-  if ((e.key === "ArrowUp" || e.key === "w") && velocityY === 0) velocityY = jumpForce;
+  if (!gameAtivo) return;
+  if (e.key === "ArrowRight" || e.key === "d") key.right = true;
+  if (e.key === "ArrowLeft" || e.key === "a") key.left = true;
+  if ((e.key === "ArrowUp" || e.key === "w") && velocidadeY === 0) velocidadeY = pulo;
 });
 
 document.addEventListener("keyup", (e) => {
-  if (e.key === "ArrowRight" || e.key === "d") keys.right = false;
-  if (e.key === "ArrowLeft" || e.key === "a") keys.left = false;
+  if (e.key === "ArrowRight" || e.key === "d") key.right = false;
+  if (e.key === "ArrowLeft" || e.key === "a") key.left = false;
 });
 
 function update() {
-  if (!gameActive) return;
+  if (!gameAtivo) return;
 
-  
-  if (keys.right) marioX += moveSpeed;
-  if (keys.left) marioX -= moveSpeed;
+  if (key.right) marioX += Movimento;
+  if (key.left) marioX -= Movimento;
 
-  
-  marioY += velocityY;
-  velocityY += gravity;
+  marioY += velocidadeY;
+  velocidadeY += gravidade;
 
- 
   if (marioY < 100) {
     marioY = 100;
-    velocityY = 0;
+    velocidadeY = 0;
   }
 
-  
   for (let pipe of pipes) {
     const pipeX = pipe.offsetLeft;
     const pipeWidth = pipe.offsetWidth;
@@ -118,50 +114,41 @@ function update() {
       }
     }
   }
-
+  
+  
   
   mario.style.left = marioX + "px";
   mario.style.bottom = marioY + "px";
 
-  if (!battleActive) checkCollision();
+  if (!batalhaAtiva) checkCollision();
 
   requestAnimationFrame(update);
 }
 
 function checkCollision() {
-    const m = mario.getBoundingClientRect();
-  
-    for (let enemy of enemies) {
-      const e = enemy.getBoundingClientRect();
-  
-      if (!(m.top > e.bottom || m.bottom < e.top || m.right < e.left || m.left > e.right)) {
-        
-        
-        if (enemy.classList.contains("big-enemy" && "enemy-jumpable")) {
-          startQuiz(enemy);
-          break;
-        }
-  
-        
-        if (
-          m.bottom <= e.top + 10 && 
-          velocityY <= 0           
-        ) {
-          enemy.remove();
-          enemies = enemies.filter(en => en !== enemy);
-          velocityY = jumpForce * 0.7; 
-        } 
+  const m = mario.getBoundingClientRect();
+  for (let inimigo of inimigos) {
+    const e = inimigo.getBoundingClientRect();
+    if (!(m.top > e.bottom || m.bottom < e.top || m.right < e.left || m.left > e.right)) {
+      if (inimigo.classList.contains("grande-inimigo" && "inimigo-pulavel")) {
+        startQuiz(inimigo);
         break;
       }
+      if (m.bottom <= e.top + 10 && velocidadeY <= 0) {
+        inimigo.remove();
+        inimigos = inimigos.filter(en => en !== inimigo);
+        velocidadeY = pulo * 0.7; 
+      } 
+      break;
     }
   }
-  
+}
 
-function startQuiz(enemy) {
-  battleActive = true;
-  gameActive = false;
+function startQuiz(inimigo) {
+  batalhaAtiva = true;
+  gameAtivo = false;
 
-  enemy.scrollIntoView({ behavior: "smooth", inline: "center" });
+  inimigo.scrollIntoView({ behavior: "smooth", inline: "center" });
 
   if (perguntasRestantes.length === 0) perguntasRestantes = [...perguntas];
 
@@ -174,7 +161,7 @@ function startQuiz(enemy) {
   q.alternativas.forEach(alt => {
     const btn = document.createElement("button");
     btn.innerText = alt;
-    btn.onclick = () => checkAnswer(alt, q.respostaCorreta, enemy);
+    btn.onclick = () => checkAnswer(alt, q.respostaCorreta, inimigo);
     alternativasDiv.appendChild(btn);
   });
 
@@ -183,14 +170,13 @@ function startQuiz(enemy) {
   quiz.style.display = "block";
 }
 
-function checkAnswer(resposta, correta, enemy) {
+function checkAnswer(resposta, correta, inimigo) {
   if (resposta === correta) {
     alert("Resposta correta!");
-    enemy.remove();
-    enemies = enemies.filter(e => e !== enemy);
+    inimigo.remove();
+    inimigos = inimigos.filter(e => e !== inimigo);
     closeQuiz();
-
-    if (enemy.classList.contains("big-enemy")) {
+    if (inimigo.classList.contains("inimigo-grande")) {
       alert("🎉 Você derrotou o Boss e venceu o jogo!");
       document.querySelector(".end").innerText = "🏆 Vitória!";
     }
@@ -206,9 +192,8 @@ function closeQuiz() {
   setTimeout(() => {
     overlay.style.display = "none";
   }, 400);
-
-  battleActive = false;
-  gameActive = true;
+  batalhaAtiva = false;
+  gameAtivo = true;
   requestAnimationFrame(update);
 }
 
