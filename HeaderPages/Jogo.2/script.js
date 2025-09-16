@@ -11,7 +11,7 @@ let gameAtivo = true, batalhaAtiva = false;
 const key = { left: false, right: false };
 
 let inimigos = Array.from(document.querySelectorAll(".inimigo"));
-let canos = Array.from(document.querySelectorAll(".cano"));
+let pipes = Array.from(document.querySelectorAll(".pipe"));
 
 const perguntas = [
   {
@@ -100,17 +100,29 @@ function update() {
     const pipeWidth = pipe.offsetWidth;
     const pipeHeight = pipe.offsetHeight;
     const pipeTop = 100 + pipeHeight;
-
-    if (marioX + mario.offsetWidth > pipeX && marioX < pipeX + pipeWidth) {
-      if (marioX + mario.offsetWidth > pipeX && marioX < pipeX && marioY < pipeTop) {
+    const pipeRight = pipeX + pipeWidth;
+  
+    const marioRight = marioX + mario.offsetWidth;
+    const marioBottom = marioY;
+    const marioTop = marioY + mario.offsetHeight;
+  
+    // Se Mario está alinhado horizontalmente com o cano
+    if (marioRight > pipeX && marioX < pipeRight) {
+      
+      // Colisão pelo topo (Mario cai em cima do cano)
+      if (marioBottom <= pipeTop && marioBottom >= pipeTop - 30 && velocidadeY <= 0) {
+        marioY = pipeTop;
+        velocidadeY = 0;
+      }
+  
+      // Colisão pela esquerda do cano
+      if (marioRight > pipeX && marioX < pipeX && marioTop > 100 && marioBottom < pipeTop) {
         marioX = pipeX - mario.offsetWidth;
       }
-      if (marioX < pipeX + pipeWidth && marioX + mario.offsetWidth > pipeX + pipeWidth && marioY < pipeTop) {
-        marioX = pipeX + pipeWidth;
-      }
-      if (marioY <= pipeTop && marioY >= pipeTop - 30 && velocityY <= 0) {
-        marioY = pipeTop;
-        velocityY = 0;
+  
+      // Colisão pela direita do cano
+      if (marioX < pipeRight && marioRight > pipeRight && marioTop > 100 && marioBottom < pipeTop) {
+        marioX = pipeRight;
       }
     }
   }

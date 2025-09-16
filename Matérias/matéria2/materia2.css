@@ -1,3 +1,5 @@
+@import url(../../global/global.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -17,58 +19,6 @@ body {
   color: #145214;
   line-height: 1.6;
   background: #fdfdfd;
-}
-
-header {
-  background: var(--verde-floresta-escuro);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo-header {
-  height: 3rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--verde-erva-doce);
-  font-size: 1.2rem;
-  font-family: 'Kay Pho Du', sans-serif;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  color: var(--verde-jade-claro);
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--verde-jade-claro);
-  transition: width 0.3s ease;
-}
-
-nav ul li a:hover::after,
-nav ul li a.active::after {
-  width: 100%;
 }
 
 .intro {
