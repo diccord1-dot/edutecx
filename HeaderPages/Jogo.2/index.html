@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Evexplorer Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kay+Pho+Du:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet"> 
+<link rel="shortcut icon" href="../../imgs/logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <header>
+    <a href="../../index.html"><img src="../../imgs/logo.png" alt="Logo" class="logo-header"></a>
+    <nav>
+        
+        <ul>
+            <li><a href="../../HeaderPages/Sobre/sobre.html">Sobre nós</a></li>
+            <li><a href="../../HeaderPages/Jogo.2/index.html">Jogo</a></li>
+            <li><a href="../../HeaderPages/Contato/contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <div class="game" id="game">
+    <div class="ground"></div>
+
+    
+    <img src="koala.png" class="mario" id="mario" alt="Mario">
+
+    
+    <img src="cano.png" class="pipe" alt="Cano" style="left: 500px;">
+    <img src="inimigo.png" class="enemy enemy-jumpable" alt="Inimigo" style="left: 650px;">
+    <img src="inimigo.png" class="enemy enemy-jumpable" alt="Inimigo" style="left: 950px;">
+    <img src="cano.png" class="pipe" alt="Cano" style="left: 1250px;">
+    <img src="cano.png" class="pipe blocking-pipe" alt="Cano" style="left: 1600px;">
+    <img src="boss.png" class="enemy big-enemy enemy-jumpable" alt="Boss" style="left: 1750px;">
+
+    
+    <div class="end" style="left: 2300px;">🏁</div>
+  </div>
+
+  
+  <div id="overlay"></div>
+
+  <!-- Quiz -->
+  <div class="quiz" id="quiz">
+    <h2>Quiz de Batalha!</h2>
+    <p id="question"></p>
+    <div id="alternativas"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

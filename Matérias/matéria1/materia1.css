@@ -242,16 +242,9 @@ margin-left: 10rem;
 }
 
 
-
-
-
-
-
-
-
 .papel-oxigenio {
 
-  height: 65rem;
+  height: 55rem;
  background-color: var(--normal);
 
   display: flex;
@@ -261,36 +254,55 @@ margin-left: 10rem;
   align-items: flex-start;
 }
 
-
-
-.texto-oxigenio2 h2 {
-
-  color: #1e3d1c;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.texto-oxigenio2 {
-
-  color: #2f4f2f;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-
-.imagem-texto img {
+.divgeral-oxigenio {
 
   display: flex;
+  justify-content: space-between;
+}
+
+.texto-oxigenio {
+
+ 
+}
+
+.texto-oxigenio p {
+
+  
+}
+
+.folhas-abertas {
+
+  width: 50px;
+  height: 720px;
+  
 }
 
 
-.papel-oxigenio p {
 
-  line-height: 2.0;
-  font-size: 20px;
-  width: 90%;
+.divgeral-oxigenio p {
+
+  font-size: 1.5rem;
+  margin-top: 2rem;
+
 }
+
+
+
+.segundop  {
+
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,7 +318,7 @@ margin-left: 10rem;
 
 .importancia-fotossintese{
 
-  height: 80rem;
+  height: 90rem;
   background-color: var(--extra-deep-3);
 }
 
@@ -315,7 +327,6 @@ margin-left: 10rem;
   padding: 40px;
   max-width: 100%;
   margin: auto;
-  color: #f0f0f0;
 }
 
 
@@ -325,39 +336,64 @@ margin-left: 10rem;
   color: #dfffd8;
 }
 
-.importancia-fotossintese p {
+.primeirop {
   font-size: 1rem;
   margin-bottom: 20px;
+  color: var(--light-active);
+}
+
+.divblocos {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 4rem; 
+  max-width: 56.25rem; 
+  margin: 0 auto; 
+  align-items: stretch;
+
+}
+.divblocos p {
+
+  font-size: 1.7rem;
+  width: 80%;        
+  margin: 0 auto; 
+  
+}
+
+.producao-oxigenio {
+
+  background-color: var(--extra-light-2);
+  width: 419px;
+  height: 364px;
+}
+
+.cadeia-alimentar {
+
+  background-color: var(--extra-light-1);
+  width: 419px;
+  height: 364px;
+ 
+ 
+}
+
+.controle-carbonico {
+
+  background-color: var(--extra-light-2);
+  width: 419px;
+  height: 364px;
+ 
+ 
+}
+
+.combustiveis-fosseis {
+
+  background-color: var(--extra-light-1);
+  width: 419px;
+  height: 364px;
+  
 }
 
 
-
-
-
-
-.importancia-fotossintese button {
-  background-color: #1b5e20;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  margin: 10px 10px 0 0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.importancia-fotossintese button:hover {
-  background-color: #145015;
-}
-
-.importancia-fotossintese .button2 {
-  background-color: #2e7d32;
-}
-
-.importancia-fotossintese .button2:hover {
-  background-color: #255d28;
-}
 
 
 
