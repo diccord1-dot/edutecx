@@ -108,12 +108,12 @@ function checkAnswer(resposta, correta, inimigo) {
     batalhaAtiva = false
     gameAtivo = true
 
-    // Verifica se era o boss
+    
     if (inimigo.classList.contains("grande-inimigo")) {
       gameAtivo = false
       batalhaAtiva = false
 
-      // Cria mensagem de vitória
+      
       const mensagem = document.createElement("div")
       mensagem.className = "mensagem-vitoria"
       mensagem.innerHTML = "🏆 Você venceu!"

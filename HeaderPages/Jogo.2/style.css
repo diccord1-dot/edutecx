@@ -10,6 +10,7 @@ html, body {
   height: 100%;
   overflow-x: auto;
   font-family: sans-serif;
+  overflow-y:scroll;
 }
 
 /* Container principal */
